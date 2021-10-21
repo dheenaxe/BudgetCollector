@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BudgetCollector.Models.Budget>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    double toplam = 0;
+}
+
+<h2>@ViewBag.Date</h2>
+<table class="table">
+    <tr>
+        <th>
+            Harcanan Para
+        </th>
+        <th>
+            Açıklama
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        toplam += item.Fiyat;
+        ViewBag.Toplam = toplam;
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fiyat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aciklama)
+            </td>
+        </tr>
+    }
+
+</table>
+
+Toplam Harcanan Günlük Para: @ViewBag.Toplam

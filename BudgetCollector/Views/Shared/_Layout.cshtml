@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BudgetCollector</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <div class="banner_logo"></div>
+            <div class="banner_other">
+                <ul>
+                    <li><a href="#">Anasayfa</a></li>
+                    <li>@Html.ActionLink("Günlük Harcamalarım", "Index", "Default")</li>
+                    <li>@Html.ActionLink("Yeni Harcama Ekle", "Create", "Default")</li>
+                    <li>@Html.ActionLink("Profilim", "Login", "Default")</li>
+                </ul>
+            </div>
+        </div>
+        <div class="center">
+            <div class="menu">s
+                <ul>
+                    <li>@Html.ActionLink("Kategorilerimi Listele", "ListKategori", "Default")</li>
+                    <li>@Html.ActionLink("Kategori Ekle", "KategoriEkle", "Default")</li>
+                    <li><a href="#">Bir Harcama Ara</a></li>
+                    <li><a href="#">Haftalık Özet</a></li>
+                    <li><a href="#">Aylık Özet</a></li>
+                    <li><a href="#">Yıllık Özet</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                @RenderBody()
+            </div>
+            <div class="menu2"></div>
+        </div>
+        <div class="footer">
+            Fatih Burak Toprak - 2017
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

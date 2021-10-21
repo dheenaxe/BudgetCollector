@@ -1,0 +1,26 @@
+﻿@model IEnumerable<BudgetCollector.Models.Category>
+
+@{
+    ViewBag.Title = "ListKategori";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kategorileriniz</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Kategori Adı
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.kategoriadi)
+        </td>
+    </tr>
+}
+
+</table>
